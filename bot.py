@@ -11,7 +11,7 @@ non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 class telegram_chatbot():
 
     def __init__(self):
-        self.token = '1186846195:AAHjOEd8UG6-4Wq8U1fTzOSZ0fVlFl-_oHE'
+        self.token = ''
         self.base = "https://api.telegram.org/bot{}/".format(self.token)
 
     def get_updates(self, offset=None):
@@ -29,13 +29,7 @@ class telegram_chatbot():
 def text(msg):
     msg = msg.lower()
     if msg == "hi":
-        rply = "Hey beautiful \U0001F609"
-        #rply = "Hey beautiful"
-    elif msg == "i love you":
-        rply = "Bhaluu koi?????? \U0001F612"
-        #rply = "Bhaluu koi??????"
-    elif "i love you bhaluu" in msg:
-        rply = "I love you tooooooo buchii.... maaaaahhhh"
+        rply = "Hey beautiful \U0001F609
     else:
         #rply = "sorry"
         rply = "\U0001F612"
